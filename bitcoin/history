@@ -1,0 +1,1045 @@
+   68  ./getImages.sh 
+   69  vim setupImages.sh 
+   70  ./setupImages.sh 
+   71  ls
+   72  vim setupImages.sh 
+   73  git status
+   74  git stash
+   75  git pull
+   76  ls
+   77  vim blockapps.yml
+   78  git status
+   79  git add blockapps.yml 
+   80  git commit -m "Added apex service declaration"
+   81  git push 
+   82  ls
+   83  git status
+   84  git remote add fork git@github.com/dymurray/blockapps
+   85  git fetch fork
+   86  git remote remove fork
+   87  git remote add fork git@github.com:/dymurray/blockapps
+   88  git fetch fork
+   89  git sttaus
+   90  git status
+   91  git push fork UseLatest:UseLatest
+   92  ls
+   93  vim blockapps.yml
+   94  ls
+   95  vim getImages.sh 
+   96  vim blockapps.yml
+   97  ls
+   98  chmod +x getImages.sh startup.sh startup.sh 
+   99  ls
+  100  chmod +x setupImages.sh 
+  101  ls
+  102  vim getImages.sh 
+  103  ./getImages.sh 
+  104  ls
+  105  vim setupImages.sh 
+  106  ./setupImages.sh 
+  107  vim setupImages.sh 
+  108  ./setupImages.sh 
+  109  vim setupImages.sh 
+  110  ./setupImages.sh 
+  111  ls
+  112  vim setupImages.sh 
+  113  docker images
+  114  sudo baobab 
+  115  ./getImages.sh 
+  116  ./setupImages.sh 
+  117  vim setupImages.sh 
+  118  oc login
+  119  ./setupImages.sh 
+  120  vim setupImages.sh 
+  121  oc new-project strato
+  122  ./setupImages.sh 
+  123  ls
+  124  vim startup.sh 
+  125  ./startup.sh 
+  126  oc get pods
+  127  watch oc get pods
+  128  oc get route
+  129  watch oc get pods
+  130  ls
+  131  git status
+  132  git diff
+  133  ls
+  134  vim blockapps.yml
+  135  oc get pods
+  136  oc describe pod strato-1-zqkmd 
+  137  oc logs strato-1-zqkmd 
+  138  oc get pods
+  139  oc exec -it nginx-1-c5nk4
+  140  oc exec -it nginx-1-c5nk4 bash
+  141  oc get pods
+  142  oc exec -it apex-1-x63bs bash
+  143  ls
+  144  oc get pods
+  145  oc logs strato-1-zqkmd 
+  146  oc get svc
+  147  oc get pods
+  148  oc delete project strato
+  149  oc get is --all-namespaces
+  150  oc new-project strato
+  151  oc login
+  152  oc get is --all-namespaces
+  153  oc login -u system:admin
+  154  oc get is --all-namespaces
+  155  oc new-project strato
+  156  ./setupImages.sh 
+  157  oc login
+  158  ./setupImages.sh 
+  159  docker images
+  160  oc get is --all-namespaces
+  161  oc login -u system:admin
+  162  oc get is --all-namespaces
+  163  oc get is -n strato
+  164  oc login -u admin
+  165  oc get pods
+  166  oc project strato
+  167  oc login -u system:admin
+  168  oc delete project strato
+  169  oc login -u developer
+  170  oc new-project strato
+  171  ./startup.sh 
+  172  ./setupImages.sh 
+  173  docker images
+  174  ./getImages.sh 
+  175  oc login -u admin
+  176  ./getImages.sh 
+  177  git status
+  178  git diff
+  179  git status
+  180  oc get svc
+  181  oc login -u system:admin
+  182  oc get svc
+  183  ping docker-registry.default.svc
+  184  oc get pods
+  185  oc exec -it docker-registry-1-7zlt0 bash
+  186  git status
+  187  git diff
+  188  git add blockapps.yml 
+  189  git status
+  190  git commit -m "Add nginx route and fix typos"
+  191  git push fork UseLatest:UseLatest 
+  192  git status
+  193  git fetch origin
+  194  git rebase origin/UseLatest
+  195  git diff HEAD
+  196  git diff HEAD~1
+  197  vim blockapps.yml
+  198  exit
+  199  ls
+  200  vim blockapps.yml
+  201  git status
+  202  ls
+  203  vim blockapps.yml
+  204  pwd
+  205  cd /git/
+  206  ls
+  207  cd blockapps/
+  208  ls
+  209  vim blockapps.yml
+  210  docker rm -v $(docker ps -a -q -f status=exited)
+  211  git status
+  212  git diff
+  213  exit
+  214  oc get is -n openshift
+  215  apb push -o
+  216  oc get imagestreams -n openshift
+  217  oc describe apb
+  218  oc get is -n openshift
+  219  apb push -o
+  220  oc get is -n openshift nginx-apb
+  221  oc describe is -n openshift nginx-apb
+  222  cd ~/src/github.com/openshift/ansible-service-broker/
+  223  ls
+  224  vim pkg/registries/adapters/local_openshift_adapter.go 
+  225  git status
+  226  ls
+  227  cd pkg/
+  228  ls
+  229  cd registries/
+  230  ls
+  231  vim filter.go 
+  232  vim adapters/local_openshift_adapter.go 
+  233  grep -R config
+  234  cd adapters/
+  235  grep -R config
+  236  grep -R Config
+  237  ls
+  238  vim local_openshift_adapter.go 
+  239  make run
+  240  ls
+  241  grep -R Configuration
+  242  vim adapter.go 
+  243  c d..
+  244  cd ..
+  245  ls
+  246  vim registry.go 
+  247  vim adapters/local_openshift_adapter.go 
+  248  grep -R Images
+  249  vim registry.go 
+  250  ls
+  251  git status
+  252  git diff
+  253  ls
+  254  git status
+  255  git add adapters/ registry.go 
+  256  git commit -m "Add configuration ability for administrator"
+  257  git push fork ocpregupdate:ocpregupdate 
+  258  git push fork ocpregupdate:ocpregupdate --force
+  259  ls
+  260  cd adapters/
+  261  ls
+  262  cp rhcc_adapter_test.go local_openshift_test.go
+  263  vim local_openshift_test.go 
+  264  mv local_openshift_test.go local_openshift_adapter_test.go
+  265  vim local_openshift_adapter_test.go 
+  266  cp dockerhub_adapter_test.go local_openshift_adapter_test.go 
+  267  vim local_openshift_adapter_test.go 
+  268  vim rhcc_adapter_test.go 
+  269  vim adapter_test.go 
+  270  ls
+  271  vim local_openshift_adapter_test.go 
+  272  vim local_openshift_adapter.go 
+  273  vim dockerhub_adapter.go 
+  274  vim local_openshift_adapter.go 
+  275  cd ..
+  276  ls
+  277  cd ..
+  278  ls
+  279  cd clients/
+  280  ls
+  281  vim openshift.go 
+  282  cd ..
+  283  ls
+  284  cd registries/adapters/
+  285  ls
+  286  vim local_openshift_adapter_test.go 
+  287  grep -R Local
+  288  vim local_openshift_adapter_test.go 
+  289  vim dockerhub_adapter.go 
+  290  cd ..
+  291  ls
+  292  cd ..
+  293  ls
+  294  cd ..
+  295  ls
+  296  vim templates/deploy-ansible-service-broker.template.yaml 
+  297  cd /git/nginx-apb/
+  298  apb push
+  299  python -v
+  300  uname -r
+  301  cd /git/ansible-playbook-bundle/
+  302  ls
+  303  git status
+  304  ls
+  305  vim src/apb/engine.py 
+  306  sudo python setup.py install
+  307  apb boostrap
+  308  vim src/apb/engine.py 
+  309  sudo python setup.py install
+  310  apb boostrap
+  311  apb bootstrap
+  312  vim src/apb/engine.py 
+  313  apb bootstrap
+  314  sudo python setup.py install
+  315  apb bootstrap
+  316  vim src/apb/engine.py 
+  317  vim src/apb/cli.py 
+  318  vim src/apb/engine.py 
+  319  sudo python setup.py install
+  320  vim src/apb/engine.py 
+  321  apb boostrap
+  322  apb bootstrap
+  323  vim src/apb/engine.py 
+  324  sudo python setup.py install
+  325  vim src/apb/engine.py 
+  326  sudo python setup.py install
+  327  vim src/apb/engine.py 
+  328  cd /git/nginx-apb/
+  329  apb push- -o
+  330  apb push -o
+  331  apb push -h
+  332  vim src/apb/engine.py 
+  333  cd /git/ansible-playbook-bundle/
+  334  vim src/apb/engine.py 
+  335  sudo python setup.py install
+  336  vim src/apb/engine.py 
+  337  sudo python setup.py install
+  338  vim src/apb/engine.py 
+  339  sudo python setup.py install
+  340  vim src/apb/engine.py 
+  341  sudo python setup.py install
+  342  vim src/apb/engine.py 
+  343  sudo python setup.py install
+  344  vim src/apb/engine.py 
+  345  sudo python setup.py install
+  346  vim src/apb/engine.py 
+  347  sudo python setup.py install
+  348  vim src/apb/engine.py 
+  349  sudo python setup.py install
+  350  git diff
+  351  vim src/apb/engine.py 
+  352  git diff
+  353  git status
+  354  git add src/
+  355  git commit -m "Add bootstrap to end of push"
+  356  git push fork opregpush:opregpush 
+  357  flake8 src/
+  358  cd /git/
+  359  ls
+  360  git clone git@github.com:/openshift/openshift-ansible
+  361  cd openshift
+  362  cd ../openshift-ansible/
+  363  ls
+  364  cd roles/
+  365  ls
+  366  cd ansible_service_broker/
+  367  ls
+  368  cd tasks/
+  369  ls
+  370  vim main.yml 
+  371  vim install.yml 
+  372  git status
+  373  git diff
+  374  git status
+  375  git checkout -b template origin/master
+  376  git add install.yml 
+  377  git commit -m "Update service broker configmap and serviceaccount privileges"
+  378  git push fork template:template
+  379  git remote add fork git@github.com:/dymurray/openshift-ansible.git
+  380  git fetch fork
+  381  git push fork template:template
+  382  ls
+  383  vim install.yml 
+  384  git diff
+  385  git status
+  386  git add install.yml 
+  387  git commit -m "Add secret too"
+  388  git push fork template:template 
+  389  vim install.yml 
+  390  git status
+  391  ls
+  392  vim remove.yml 
+  393  grep -R asb-registry
+  394  git status
+  395  git add .
+  396  git commit -m "Updates"
+  397  git push fork template:template 
+  398  vim install.yml 
+  399  git status
+  400  git add install.yml 
+  401  git commit -m "oops"
+  402  git rebase -i HEAD~4
+  403  git push fork template:template --force
+  404  vim install.yml 
+  405  git add install.yml 
+  406  git commit -m "Proper quotes"
+  407  git push fork template:template 
+  408  cd ~/src/github.com/openshift/ansible-service-broker/
+  409  ls
+  410  cd pkg/
+  411  ls
+  412  cd ..
+  413  vim etc/generated_local_development.yaml 
+  414  cd pkg/
+  415  grep -R "no principal found"
+  416  vim handler/handler.go 
+  417  ls
+  418  cd ..
+  419  vim etc/example-registry-auth.yaml 
+  420  vim etc/example-config.yaml 
+  421  ls
+  422  git branch
+  423  git checkout master
+  424  git pull
+  425  ls
+  426  cd docs/
+  427  ls
+  428  vim config.md 
+  429  git status
+  430  ls
+  431  vim design.md 
+  432  cd ..
+  433  ls
+  434  vim etc/example-config.yaml 
+  435  vim docs/config.md 
+  436  vim etc/example-config.yaml 
+  437  git status
+  438  git checkout -b docreg origin/master
+  439  git status
+  440  git add docs/ etc/
+  441  git commit -m "Bug 1507111 - Update docs and example configs for local openshift adapter"
+  442  git push fork docreg:docreg
+  443  cd /git/ansible-playbook-bundle/
+  444  ls
+  445  git status
+  446  git checkout master
+  447  git pull
+  448  ls
+  449  vim docs/developers.md 
+  450  vim docs/design.md 
+  451  vim docs/getting_started
+  452  vim docs/getting_started.md 
+  453  git status
+  454  git checkout -b pushdoc origin/master
+  455  git status
+  456  git add docs/
+  457  git commit -m "Bug 1507111 - Add docs for apb push -o"
+  458  git push fork pushdoc:pushdoc
+  459  sudo vim /etc/sysconfig/docker
+  460  sudo service docker restart
+  461  cd ~/Downloads/blockapps
+  462  cd ~/Downloads/blockapps/
+  463  ls
+  464  chmod +x startup.sh setupImages.sh getImages.sh 
+  465  ls
+  466  vim README.txt 
+  467  ./getImages.sh 
+  468  vim getImages.sh 
+  469  oc login
+  470  ./getImages.sh 
+  471  vim getImages.sh 
+  472  ./getImages.sh 
+  473  vim getImages.sh 
+  474  ./getImages.sh 
+  475  oc login
+  476  cd ~/src/github.com/openshift/ansible-service-broker/
+  477  ls
+  478  vim templates/deploy-ansible-service-broker.template.yaml 
+  479  docker images
+  480  ls
+  481  vim templates/deploy-
+  482  vim templates/deploy-ansible-service-broker.template.yaml 
+  483  git status
+  484  git checkout master
+  485  git pull
+  486  ls
+  487  git status
+  488  git diff
+  489  qls
+  490  ls
+  491  vim pkg/registries/adapters/local_openshift_adapter
+  492  vim pkg/registries/adapters/local_openshift_adapter.go 
+  493  cd pkg/registries/adapters/
+  494  ls
+  495  vim dockerhub_adapter.go 
+  496  vim local_openshift_adapter
+  497  vim local_openshift_adapter.go 
+  498  cd ..
+  499  ls
+  500  cd ..
+  501  ls
+  502  cd ..
+  503  ls
+  504  git status
+  505  vim templates/deploy-ansible-service-broker.template.yaml 
+  506  ./scripts/prep_local_devel_env.sh 
+  507  exit
+  508  cd /git/mediawiki123-apb/
+  509  apb push --openshift
+  510  apb push --openshift | grep docker-registry
+  511  apb push --openshift
+  512  apb push -o -d Dockerfile-latest
+  513  apb push -o -f Dockerfile-latest
+  514  docker images
+  515  apb push -o -f Dockerfile-latest
+  516  docker rmi -f 172.30.1.1:5000/openshift/mediawiki123-apb
+  517  apb push -o -f Dockerfile-latest
+  518  docker images
+  519  apb push -o -f Dockerfile-latest
+  520  oc get svc -n default
+  521  apb push -o -f Dockerfile-latest
+  522  apb bootstrap
+  523  oc get is
+  524  oc get is -n openshift
+  525  apb relist
+  526  apb push -o -f Dockerfile-latest
+  527  cd ..
+  528  ls
+  529  cd nginx-apb/
+  530  git branch
+  531  git pull
+  532  ls
+  533  vim apb.yml 
+  534  apb push --openshift
+  535  apb bootstrap
+  536  cd /git/catasb/local/linux/
+  537  ./reset_environment.sh 
+  538  oc get is -n openshift
+  539  apb list --broker 0.0.0.0:1338
+  540  apb list --broker https://0.0.0.0:1338
+  541  oc get is -n openshift
+  542  ./reset_environment.sh 
+  543  vim /git/ansible-playbook-bundle/src/apb/e
+  544  vim /git/ansible-playbook-bundle/src/apb/engine.py 
+  545  git status
+  546  cd /git/ansible-playbook-bundle/
+  547  ls
+  548  git status
+  549  git add src/
+  550  git commit -m "Fix whitespace"
+  551  git push fork opregpush:opregpush 
+  552  cd /git/catasb/local/linux/
+  553  ./reset_environment.sh 
+  554  oc get pods
+  555  oc logs -f asb-1-722df -c asb
+  556  vim ../../config/my_vars.yml
+  557  ./reset_environment.sh 
+  558  vim ../../config/my_vars.yml
+  559  docker images
+  560  oc cluster down
+  561  oc cluster up
+  562  oc cluster down
+  563  git status
+  564  vim ../../config/my_vars.yml
+  565  ./reset_environment.sh 
+  566  ls
+  567  vim ../../ansible/roles/ansible_service_broker_setup/tasks/
+  568  vim ../../ansible/roles/ansible_service_broker_setup/tasks/main.yml 
+  569  vim ../../ansible/roles/ansible_service_broker_setup/tasks/openshift.yml 
+  570  git pull
+  571  vim ../../ansible/roles/ansible_service_broker_setup/tasks/openshift.yml 
+  572  cd ../../ansible/roles/ansible_service_broker_setup/
+  573  ls
+  574  grep -R broker
+  575  vim tasks/openshift.yml 
+  576  ls
+  577  vim templates/ansible_service_broker.yaml.j2 
+  578  vim tasks/main.yml 
+  579  vim tasks/openshift.yml 
+  580  grep -R local_target
+  581  vim defaults/main.yml 
+  582  cd ..
+  583  ls
+  584  cd ..
+  585  ls
+  586  grep -R template
+  587  grep -R template_
+  588  grep -R template_url
+  589  cd /git/catasb/
+  590  ls
+  591  cd local/linux/
+  592  ls
+  593  ./reset_environment.sh 
+  594  ls
+  595  exit
+  596  vim ../../config/my_vars.yml
+  597  ./reset_environment.sh 
+  598  sudo baobab 
+  599  vim ../../config/my_vars.yml
+  600  ./reset_environment.sh 
+  601  exit
+  602  ssh desktop
+  603  ls
+  604  tmux
+  605  tmux a
+  606  cd /git/catasb/local/linux/
+  607  ./reset_environment.sh 
+  608  cd /git/shared-secrets/
+  609  ls
+  610  cd aws/
+  611  ls
+  612  ssh -R 8443:localhost:8443 -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  613  ssh -L 8443:localhost:8443 -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  614  ls
+  615  cd /git/catasb/
+  616  ls
+  617  cd ec2/
+  618  ls
+  619  git branch
+  620  git pull
+  621  ls
+  622  ./run_create_infrastructure.sh 
+  623  vim run_create_infrastructure.sh 
+  624  export AWS_SECRET_ACCESS_KEY=AKIAJBFIHL7BAWYIFSNA
+  625  vim run_create_infrastructure.sh 
+  626  cat run_
+  627  cat run_create_infrastructure.sh 
+  628  export AWS_ACCESS_KEY_ID=AKIAJBFIHL7BAWYIFSNA
+  629  export AWS_SECRET_ACCESS_KEY=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
+  630  export AWS_ACCESS_KEY_ID=AKIAII2OKDCV3UOK6ACQ
+  631  source ~/.bashrc 
+  632  ./run_create_infrastructure.sh 
+  633  scp desktop:/git/vm_env/pulp_2.6_rhel_7_import/splice_rsa.pub .
+  634  scp desktop:/git/vm_env/pulp_2.6_rhel_7_import/splice_rsa
+  635  scp desktop:/git/vm_env/pulp_2.6_rhel_7_import/splice_rsa .
+  636  pwd
+  637  ls
+  638  source ~/.bashrc 
+  639  cd /git/nginx-apb/
+  640  apb push -o
+  641  cd ~/src/github.com/openshift/ansible-service-broker/
+  642  vim etc/generated_local_development.yaml 
+  643  cat etc/generated_local_development.yaml 
+  644  cd /git/
+  645  ls
+  646  oc get pods
+  647  oc login
+  648  ls
+  649  cd ethereum-console-apb/
+  650  ls
+  651  vim apb.yml 
+  652  oc get pods
+  653  vim apb.yml 
+  654  ls
+  655  vim roles/provision-ethereum-console-apb/tasks/main.yml 
+  656  apb push -o
+  657  apb list
+  658  oc get is -n openshift
+  659  ls
+  660  vim Dockerfile 
+  661  apb prepare
+  662  apb push -o
+  663  oc project ansible-service-broker 
+  664  oc get pods
+  665  oc logs -f asb-1-96cm5 -c asb
+  666  ls
+  667  vim apb.yml 
+  668  apb prepare
+  669  apb push -o
+  670  vim apb.yml 
+  671  oc project dh-ethereum-console-apb-prov-gldl9 
+  672  oc get pods
+  673  oc logs apb-3d77b60e-2d7d-4f24-8867-9808f90d4d2d 
+  674  ls
+  675  vim roles/provision-ethereum-console-apb/tasks/main.yml 
+  676  apb push -o
+  677  oc project dh-ethereum-console-apb-prov-tnlhb 
+  678  oc get pods
+  679  oc logs apb-15275f8c-228e-4a47-a865-ded38251ffff 
+  680  vim apb.yml 
+  681  vim roles/provision-ethereum-console-apb/tasks/main.yml 
+  682  apb push -o
+  683  oc project dh-ethereum-console-apb-prov-9fm26 
+  684  oc get pods
+  685  oc logs apb-25580149-b804-4a32-a308-5e0981235206 
+  686  cd /git/
+  687  git clone https://github.com/openshift/shared-secrets
+  688  ls
+  689  cd shared-secrets/
+  690  ls
+  691  cd aws/
+  692  ls
+  693  ssh -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  694  ls -la 
+  695  chmod +777 libra.pem 
+  696  ssh -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  697  chmod 664 libra.pem 
+  698  ls
+  699  ls -la
+  700  ssh -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  701  chmod 755 libra.pem 
+  702  ssh -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  703  chmod 400 libra.pem 
+  704  ssh -i libra.pem root@host-8-241-124.host.centralci.eng.rdu2.redhat.com
+  705  export AWS_SSH_KEY_NAME=splice
+  706  ssh desktop
+  707  exit
+  708  ./run_create_infrastructure.sh 
+  709  sudo yum install python-boto
+  710  ./run_create_infrastructure.sh 
+  711  env
+  712  env | grep splice
+  713  ls
+  714  vim run_create_infrastructure.sh 
+  715  vim ../ansible/group_vars/all.yml 
+  716  ls
+  717  grep -R splice
+  718  vim README.md 
+  719  export AWS_SSH_KEY_NAME=splice_rsa
+  720  ./run_
+  721  ./run_create_infrastructure.sh 
+  722  ls
+  723  export AWS_SSH_KEY_NAME=shared-devel
+  724  vim ~/.bashrc 
+  725  source ~/.bashrc 
+  726  pwd
+  727  ls
+  728  cd /git/catasb/
+  729  sudo baobab 
+  730  sudo service docker stop
+  731  sudo su
+  732  sudo service docker start
+  733  cd local/linux/
+  734  sudo baobab 
+  735  ./reset_environment.sh 
+  736  pwd
+  737  oc login
+  738  oc whoami
+  739  where
+  740  vim ~/lior
+  741  lw
+  742  vim /git/nginx-apb/apb.yml 
+  743  cd ~/src/github.com/openshift/ansible-service-broker/
+  744  ls
+  745  vim pkg/registries/adapters/local_openshift_adapter.go 
+  746  oc status
+  747  oc cluster down
+  748  apb bootstrap --broker asb-1338-openshift-ansible-service-broker.apps.1110-rx7.qe.rhcloud.com
+  749  apb bootstrap --broker https://asb-1338-openshift-ansible-service-broker.apps.1110-rx7.qe.rhcloud.com
+  750  apb bootstrap --broker http://asb-1338-openshift-ansible-service-broker.apps.1110-rx7.qe.rhcloud.com
+  751  apb bootstrap --broker https://asb-1338-openshift-ansible-service-broker.apps.1110-rx7.qe.rhcloud.com/ansible-service-broker
+  752  apb relist --broker https://asb-1338-openshift-ansible-service-broker.apps.1110-rx7.qe.rhcloud.com/ansible-service-broker
+  753  apb relist
+  754  cd ~
+  755  find * | grep splice
+  756  cd /git/
+  757  find * | grep splice
+  758  vim ~/.bashrc 
+  759  ls
+  760  cd shared-secrets/
+  761  ls
+  762  ls aws/
+  763  cd ..
+  764  rm -rf shared-secrets/
+  765  git clone https://github.com/Project-Helios/shared-secrets
+  766  cd shared-secrets/
+  767  ls
+  768  ls ssh/
+  769  oc get pods
+  770  oc login
+  771  exit
+  772  ./run_create_infrastructure.sh 
+  773  env
+  774  env | grep dog
+  775  ls
+  776  vim ../config/ec2_env_vars 
+  777  ./run_create_infrastructure.sh 
+  778  ls
+  779  vim ../config/m
+  780  vim ../config/my_vars.yml
+  781  ./run_setup_environment.sh 
+  782  chmod 400 /git/shared-secrets/ssh/shared-devel.p*
+  783  ./run_setup_environment.sh 
+  784  ls
+  785  vim ../config/my_vars.yml
+  786  ./reset_environment.sh 
+  787  oc project 
+  788  oc login dymurray.aws.dog8code.com:8443
+  789  oc project aws-service-broker 
+  790  oc get pods
+  791  oc logs aws-asb-2-rlsnm 
+  792  oc get configmap
+  793  oc get configmap broker-config 
+  794  oc edit configmap broker-config 
+  795  oc get pods
+  796  oc deploy --latest asb
+  797  oc get dc
+  798  oc deploy --latest aws-asb
+  799  oc get pods
+  800  oc edit clusterservicebroker
+  801  oc edit clusterservicebroker ansible-service-broker
+  802  oc edit clusterservicebroker aws-service-broker
+  803  oc get pods
+  804  oc logs aws-asb-3-57rxb -c asb
+  805  oc logs aws-asb-3-57rxb -c aws-asb
+  806  oc project dh2-mediawiki123-apb-prov-2z7lw 
+  807  oc get pods
+  808  oc logs apb-9b2e53a6-c87e-4005-a763-584248fc7c53 
+  809  oc logs apb-9b2e53a6-c87e-4005-a763-584248fc7c53 -f
+  810  oc project aws-service-broker 
+  811  oc logs apb-9b2e53a6-c87e-4005-a763-584248fc7c53 -f
+  812  oc logs aws-asb-3-57rxb -c aws-asb
+  813  oc project media 
+  814  oc get pods
+  815  oc get secret
+  816  oc project
+  817  oc get project
+  818  oc project dh-redshift-sample-app-apb-prov-q87lb 
+  819  oc get pods
+  820  oc logs apb-5531376e-dec2-4bf0-960c-f14b80ce2546 -f
+  821  oc get pods
+  822  oc get project
+  823  oc get all
+  824  oc project redshift 
+  825  oc get all
+  826  oc project aws-service-broker 
+  827  oc get pods
+  828  oc get project
+  829  apb list
+  830  oc get route -n aws-service-broker
+  831  apb list --broker aws-asb-1338-aws-service-broker.dymurray.aws.dog8code.com/aws-service-broker
+  832  apb list --broker httpsaws-asb-1338-aws-service-broker.dymurray.aws.dog8code.com/aws-service-broker
+  833  apb list --broker https://aws-asb-1338-aws-service-broker.dymurray.aws.dog8code.com/aws-service-broker
+  834  apb list --broker https://aws-asb-1338-aws-service-broker.dymurray.aws.dog8code.com/aws-service-broker | grep redshift
+  835  apb relist --broker https://aws-asb-1338-aws-service-broker.dymurray.aws.dog8code.com/aws-service-broker | grep redshift
+  836  apb relist
+  837  apb relist --broker-name aws-service-broker
+  838  ./reset_environment.sh 
+  839  vim ../config/my_vars.yml
+  840  ./reset_environment.sh 
+  841  env
+  842  env | grep AWS
+  843  oc get project
+  844  oc project dh-rds-apb-prov-pwq9v 
+  845  oc get pods
+  846  oc describe pod apb-fab30064-3030-4525-8a47-25ce775d021f 
+  847  oc get pods
+  848  oc logs apb-fab30064-3030-4525-8a47-25ce775d021f -f
+  849  env | grep AWS
+  850  oc project dh-rds-apb-prov-79zkn 
+  851  oc get pods
+  852  oc logs apb-a9150de7-56c8-4c60-a60f-81f028669834 -f
+  853  oc project dh-rds-apb-prov-pwq9v 
+  854  oc get pods
+  855  oc logs apb-fab30064-3030-4525-8a47-25ce775d021f 
+  856  ping google.com
+  857  cd ..
+  858  grep -R broker_keep
+  859  git log
+  860  yum install vysor
+  861  sudo yum install vysor
+  862  oc status
+  863  oc login
+  864  oc get pods
+  865  oc logs apb-fab30064-3030-4525-8a47-25ce775d021f 
+  866  oc get pods
+  867  oc logs apb-fab30064-3030-4525-8a47-25ce775d021f 
+  868  oc project dh-rds-apb-prov-79zkn 
+  869  oc get pods
+  870  oc logs apb-a9150de7-56c8-4c60-a60f-81f028669834 
+  871  ls
+  872  cd ec2/
+  873  ls
+  874  env | grep AWS
+  875  oc project dh-rds-apb-prov-68rrp 
+  876  oc get pods
+  877  oc logs -f apb-4789c7ef-af29-464b-9388-f199b143083b 
+  878  oc project dh-rds-apb-prov-69p7g 
+  879  oc get pods
+  880  oc logs -f apb-5d2b9f0f-e838-4da5-9e50-4808581284d1 
+  881  oc project foro 
+  882  oc get pods
+  883  oc logs sample-app-2-ddvpc 
+  884  oc get all
+  885  env | grep PRIV
+  886  oc get pods
+  887  ./reset_environment.sh 
+  888  env | grep AWS
+  889  oc login
+  890  oc project dh-sqs-apb-prov-h5gqp 
+  891  oc get pods
+  892  oc logs -f apb-6b1fa664-d37a-4292-9962-a67b9d646917 
+  893  cd ../ansible/certs/
+  894  ls
+  895  cd ..
+  896  ls
+  897  cd ..
+  898  ls
+  899  cd ec2/
+  900  ls
+  901  ./reset_environment.sh 
+  902  ls
+  903  env | grep AWS
+  904  vim run_setup_environment.sh 
+  905  ls
+  906  vim ../config/ec2_env_vars 
+  907  ./reset_environment.sh 
+  908  env
+  909  env | grep QWS
+  910  env | grep AWS
+  911  vim ../config/my_vars.yml
+  912  git pull
+  913  ls
+  914  vim ../config/ec2_env_vars 
+  915  oc login
+  916  oc get secret
+  917  oc project aws-service-broker 
+  918  oc get secret
+  919  oc get secret helios-asb-secret -o yaml
+  920  oc get configmap
+  921  oc get configmap broker-config -o yaml
+  922  oc logs aws-asb-2-2p64z 
+  923  oc logs aws-asb-2-2p64z  -c aws-asb
+  924  oc logs aws-asb-2-2p64z  -c aws-asb | less
+  925  apb relist
+  926  ls
+  927  apb relist
+  928  oc get project
+  929  apb relist --broker-name aws-service-broker
+  930  oc logs aws-asb-2-2p64z  -c aws-asb
+  931  ls
+  932  oc get secret
+  933  oc get secret helios-asb-secret -o yaml
+  934  echo "QUtJQUlJMk9LRENWM1VPSzZBQ1E=" | base64 -d
+  935  env | grep AWS
+  936  oc project kube-service-catalog 
+  937  oc get pods
+  938  oc logs controller-manager-2684945015-9pm25 
+  939  oc project ansible-service-broker 
+  940  oc get configmap broker-config -o yaml
+  941  ls
+  942  vim ../config/my_vars.yml
+  943  ./reset_environment.sh 
+  944  vim ~/.bashrc 
+  945  source ~/.bashrc 
+  946  ls
+  947  ./bin/bitcoin-cli getbalance
+  948  ./bin/bitcoin-cli help
+  949  ./bin/bitcoin-cli getwalletinfo
+  950  ./bin/bitcoin-cli getmininginfo
+  951  ./bin/bitcoin-cli getwalletinfo
+  952  ./bin/bitcoin-cli getmininginfo
+  953  ./bin/bitcoin-cli getwalletinfo
+  954  ./bin/bitcoin-cli getmininginfo
+  955  exit
+  956  tmux
+  957  ping desktop
+  958  tmux
+  959  cd /git/catasb/
+  960  vim config/m
+  961  vim config/my_vars.yml
+  962  ./re
+  963  cd local/linux/
+  964  ./reset_environment.sh 
+  965  curl -H "authorization: bearer $(oc whoami -t)"  https://<route>/ansible-service-broker/ --insecure
+  966  oc get route
+  967  curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/ --insecure
+  968   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/ --insecure
+  969   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/v2/catlog --insecure
+  970   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/v2/catalog --insecure
+  971  ls
+  972  0x5089fd0329660a053185D034af6A3Cb8F4A04a9f
+  973  12cPhMkFTzmY5H2qmxBrafDkoXnZ71uepe
+  974  cd /git/ansible-playbook-bundle/
+  975  ls
+  976  vim src/apb/engine.py 
+  977  cd ~/
+  978  ls
+  979  cd constellations/
+  980  ls
+  981  cd keypress/
+  982  vim Dockerfile 
+  983  cd ~/Electron-Cash-2.9.4/
+  984  ls
+  985  c Electron\ Cash-2.9.4/
+  986  cd Electron\ Cash-2.9.4/
+  987  ls
+  988  ./electron-cash 
+  989  sudo yum install python-qt4
+  990  ./electron-cash 
+  991  c
+  992  ls
+  993  cd packages/
+  994  ls
+  995  cd ..
+  996  ls
+  997  cd lib/
+  998  ls
+  999  vim transaction.py
+ 1000  exit
+ 1001  ls
+ 1002  grep -R histoy
+ 1003  grep -R history
+ 1004  vim bitcoin/bci.py
+ 1005  sudo python setup.py install
+ 1006  vim bitcoin/bci.py
+ 1007  sudo python setup.py install
+ 1008  vim bitcoin/bci.py
+ 1009  curl -k https://api.blocktrail.com/v1/BCC
+ 1010  curl -k https://api.blocktrail.com/v1/BCH
+ 1011  curl -k https://api.blocktrail.com/v1/BTC
+ 1012  vim bitcoin/bci.py
+ 1013  curl -k https://www.blocktrail.com/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1014  curl -k https://api.blocktrail.com/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1015  curl -k https://api.blocktrail.com/v1/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1016  vim bitcoin/bci.py
+ 1017  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1018  curl -k https://blockchain.info/bcc/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1019  curl -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1020  curl -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1021  curl -X POST -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1022  curl -k https://bitcoincash.blockexplorer.com/api/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1023  curl -k https://bitcoincash.blockexplorer.com/api
+ 1024  curl -k https://bitcoincash.blockexplorer.com/api/tx
+ 1025  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/https://bitcoincash.blockexplorer.com
+ 1026  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1027  curl -k https://bitcoincash.blockexplorer.com/api/block-index/0
+ 1028  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1029  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1030  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1031  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1032  pwd
+ 1033  sudo python setup.py install
+ 1034  vim bitcoin/bci.py
+ 1035  sudo python setup.py install
+ 1036  vim bitcoin/bci.py
+ 1037  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1038  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1039  sudo python setup.py install
+ 1040  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1041  ls
+ 1042  vim bitcoin/bci.py
+ 1043  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1044  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1045  curl -k https://blockchain.info/bcc/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1046  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1047  curl -k https://blockchain.info/address/1Bz58AfmaCLjdHf1DnnZeTUbp8yVXarMHu
+ 1048  curl -k https://blockchain.info/address/1Bz58AfmaCLjdHf1DnnZeTUbp8yVXarMHu?format=json
+ 1049  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1050  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31
+ 1051  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep script
+ 1052  ls
+ 1053  cd bitcoin
+ 1054  ls
+ 1055  ls -la
+ 1056  ls
+ 1057  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31
+ 1058  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep outputs
+ 1059  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep output
+ 1060  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep out
+ 1061  vim bci.py
+ 1062  git remote
+ 1063  git remote -v
+ 1064  vim bci.py
+ 1065  python
+ 1066  history
+ 1067  history >> history
+  965  curl -H "authorization: bearer $(oc whoami -t)"  https://<route>/ansible-service-broker/ --insecure
+  967  curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/ --insecure
+  968   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/ --insecure
+  969   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/v2/catlog --insecure
+  970   curl -H "authorization: bearer $(oc whoami -t)"  https://asb-1338-ansible-service-broker.172.17.0.1.nip.io/ansible-service-broker/v2/catalog --insecure
+ 1009  curl -k https://api.blocktrail.com/v1/BCC
+ 1010  curl -k https://api.blocktrail.com/v1/BCH
+ 1011  curl -k https://api.blocktrail.com/v1/BTC
+ 1013  curl -k https://www.blocktrail.com/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1014  curl -k https://api.blocktrail.com/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1015  curl -k https://api.blocktrail.com/v1/BCC/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1017  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1018  curl -k https://blockchain.info/bcc/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1019  curl -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1020  curl -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1021  curl -X POST -k https://bitcoincash.blockexplorer.com/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1022  curl -k https://bitcoincash.blockexplorer.com/api/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1023  curl -k https://bitcoincash.blockexplorer.com/api
+ 1024  curl -k https://bitcoincash.blockexplorer.com/api/tx
+ 1025  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/https://bitcoincash.blockexplorer.com
+ 1026  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1027  curl -k https://bitcoincash.blockexplorer.com/api/block-index/0
+ 1028  curl -k https://bitcoincash.blockexplorer.com/api/addr-validate/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1029  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1030  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1031  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1037  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE
+ 1038  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1040  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1043  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1044  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1045  curl -k https://blockchain.info/bcc/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1046  curl -k https://blockchain.info/address/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json&offset=0
+ 1047  curl -k https://blockchain.info/address/1Bz58AfmaCLjdHf1DnnZeTUbp8yVXarMHu
+ 1048  curl -k https://blockchain.info/address/1Bz58AfmaCLjdHf1DnnZeTUbp8yVXarMHu?format=json
+ 1049  curl -k https://bitcoincash.blockexplorer.com/api/addr/1Dfg9vmCNh7yjTAyFq9W6DjdZSBVNr5eqE?format=json
+ 1050  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31
+ 1051  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep script
+ 1057  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31
+ 1058  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep outputs
+ 1059  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep output
+ 1060  curl -k https://bitcoincash.blockexplorer.com/api/tx/102237c7e579b690fe9d85f19be7dbcb261c82a97c90b6c73f6790eaa2afcc31 | grep out
+ 1069  history grep | curl
+ 1070  history | grep curl
+ 1071  history | grep curl >> history
